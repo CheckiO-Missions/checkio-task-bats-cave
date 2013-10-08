@@ -1,29 +1,46 @@
 <p>
-    <i>( Describe task in general )</i>
+    On the island our Trio found an old bunker. In the bunker the rare chip located.
+    Our heroes tried to search this chip, but the bunker is occupied by bats (now it's like a bats' cave)
+    and bats leader has the chip (I wonder why the bat need a chip?).
+    So robots have to capture the leader. But it's not easy. The bunker is full by bats scouts and they alert to each other.
+    We should calculate alert time from first bat near enter to the leader.
 </p>
 
 <p>
-    Sum two passed ints
+    We have the advantage -- the bunker's walls don not reflect sound. So alert signals can extend only by straight line.
+    Alert time between two bats is proportionally to Euclidean distance between cells centers (look at illustration).
+    The time between neighbours cells is <strong>1 second</strong> (for simplicity). If alert "lines" can not pass thought wall or walls corners.
+
+</p>
+
+<p>
+    You are given the map of bunker as a list of strings, where:<br>
+    "W" -- a wall<br>
+    "B" -- a bat <br>
+    "L" -- the leader <br>
+    The entrance is placed at top left cell and here always a bat.
+</p>
+
+<p>
+    You should to calculate the minimal possible time from the first bat to the leader with a precision of two digits.
 </p>
 
 <p style="text-align: center;">
-    <img class="for_info_only" title="example" src="{{MEDIA}}example.png" alt="example" width="392px"/>
-    <img class="for_editor_only" title="example" src="{{MEDIA}}example.png" alt="example" width="380px"/>
-</p>
-
-<p><i>( Explain input and output values )</i></p>
-<p>
-    <strong>Input: </strong> Two arguments. Both are int
+    <img class="for_info_only" title="bats-bunker" src="{{MEDIA}}bats-bunker.png" alt="bats-bunker" width="392px"/>
+    <img class="for_editor_only" title="bats-bunker" src="{{MEDIA}}bats-bunker.png" alt="bats-bunker" width="380px"/>
 </p>
 
 <p>
-    <strong>Output: </strong> Int. 
+    <strong>Input: </strong> A map of bunker. A list of strings.
+</p>
+
+<p>
+    <strong>Output: </strong> The minimal possible time with a precision of two digits. A float.
 </p>
 
 
 
 <div class="for_info_only">
-    <p><i>( Put some usage examples )</i></p>
     <p>
         <strong>Example:</strong>
     </p>
@@ -35,5 +52,4 @@ checkio(5, 7) == 12
 
 <p class="for_info_only">
     <strong>How it is used: </strong>
-    <i>(Here you can explain how it can be used in development and what is usage of this.)</i>
 </p>
