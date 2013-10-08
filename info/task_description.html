@@ -3,18 +3,20 @@
     Our heroes tried to search this chip, but the bunker is occupied by bats (now it's like a bats' cave)
     and bats leader has the chip (I wonder why the bat need a chip?).
     So robots have to capture the leader. But it's not easy. The bunker is full by bats scouts and they alert to each other.
-    We should calculate alert time from first bat near enter to the leader.
+    If we want to catch the leader, then we need to know the alert time from first bat near enter to the leader.
 </p>
 
 <p>
     We have the advantage -- the bunker's walls don not reflect sound. So alert signals can extend only by straight line.
     Alert time between two bats is proportionally to Euclidean distance between cells centers (look at illustration).
-    The time between neighbours cells is <strong>1 second</strong> (for simplicity). If alert "lines" can not pass thought wall or walls corners.
+    The time between neighbours cells is <strong>1 second</strong> (for simplicity).
+    Alert "lines" can not pass thought wall or walls corners.
 
 </p>
 
 <p>
     You are given the map of bunker as a list of strings, where:<br>
+    "-" -- an empty cell<br>
     "W" -- a wall<br>
     "B" -- a bat <br>
     "L" -- the leader <br>
