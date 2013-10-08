@@ -182,7 +182,7 @@
       <tspan x="-66.196" y="65.5" font-family="Verdana-Bold" font-size="30" fill="#294270">Result: </tspan>
       <tspan x="-66.196" y="101.5" font-family="Verdana-Bold" font-size="30" fill="#294270">2.83 </tspan>
     </text>
-    <text transform="matrix(1, 0, 0, 1, 517.708, 368.5)">
+    <text transform="matrix(1, 0, 0, 1, 517.741, 368.121)">
       <tspan x="-66.196" y="-78.5" font-family="Verdana-Bold" font-size="30" fill="#294270">Input:[</tspan>
       <tspan x="-66.196" y="-42.5" font-family="Verdana-Bold" font-size="30" fill="#294270">"B-B",</tspan>
       <tspan x="-66.196" y="-6.5" font-family="Verdana-Bold" font-size="30" fill="#294270">"BW-",</tspan>
@@ -365,7 +365,7 @@
       <tspan x="-120" y="83.5" font-family="Verdana-Bold" font-size="30" fill="#294270">"B-BWB-",</tspan>
       <tspan x="57.29" y="83.5" font-family="Verdana-Bold" font-size="30" fill="#294270">]</tspan>
       <tspan x="-120" y="119.5" font-family="Verdana-Bold" font-size="30" fill="#294270">Result:</tspan>
-      <tspan x="-120" y="155.5" font-family="Verdana-Bold" font-size="30" fill="#294270">12 </tspan>
+      <tspan x="-120" y="155.5" font-family="Verdana-Bold" font-size="30" fill="#294270">9.24 </tspan>
     </text>
     <g>
       <path d="M479.864,189.66 C475.722,189.66 472.364,186.302 472.364,182.16 C472.364,178.018 475.722,174.66 479.864,174.66 C484.007,174.66 487.364,178.018 487.364,182.16 C487.364,186.302 484.007,189.66 479.864,189.66 z" fill="#F0801A"/>

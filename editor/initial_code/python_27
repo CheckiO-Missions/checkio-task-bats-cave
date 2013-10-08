@@ -1,11 +1,25 @@
-def checkio(a, b):
-    """
-        sums two passed arguments
-    """
-    return None
+def checkio(bunker):
+    
+    return 0
 
 #These "asserts" using only for self-checking and not necessary for auto-testing
 if __name__ == '__main__':
-    assert checkio(3, 2) == 5
-    assert checkio(5, 7) == 12
-    print('Done')
+    assert checkio([
+        "B--",
+        "---",
+        "--L"]) == 2.83, "1st example"
+    assert checkio([
+        "B-B",
+        "BW-",
+        "-BL"]) == 4, "2nd example"
+    assert checkio([
+        "BWB--B",
+        "-W-WW-",
+        "B-BWLB"]) == 12, "3rd example"
+    assert checkio([
+        "B---B-",
+        "-WWW-B",
+        "-WL--B",
+        "-W-B--",
+        "-WWW-B",
+        "B-BWB-"]) == 9.24, "4th example"
