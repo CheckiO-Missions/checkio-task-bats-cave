@@ -46,10 +46,25 @@
     <p>
         <strong>Example:</strong>
     </p>
-    <pre class="brush: python">
-checkio(3, 2) == 5
-checkio(5, 7) == 12
-    </pre>
+    <pre class="brush: python">checkio([
+    "B--",
+    "---",
+    "--L"]) == 2.83
+assert checkio([
+    "B-B",
+    "BW-",
+    "-BL"]) == 4
+assert checkio([
+    "BWB--B",
+    "-W-WW-",
+    "B-BWLB"]) == 12
+assert checkio([
+    "B---B-",
+    "-WWW-B",
+    "-WL--B",
+    "-W-B--",
+    "-WWW-B",
+    "B-BWB-"]) == 9.24</pre>
 </div>
 
 <p class="for_info_only">
