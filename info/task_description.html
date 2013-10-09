@@ -1,30 +1,31 @@
 <p>
-    On the island our Trio found an old bunker. In the bunker the rare chip located.
-    Our heroes tried to search this chip, but the bunker is occupied by bats (now it's like a bats' cave)
-    and bats leader has the chip (I wonder why the bat need a chip? Maybe it is Robo-Bat.).
-    So robots have to capture the leader. But it's not easy. The bunker is full by bats scouts and they alert to each other.
-    If we want to catch the leader, then we need to know the alert time from first bat near enter to the leader.
+    While searching for adventure on the island, our robotic trio found a creepy old bunker. 
+    In the bunker, someone has hidden a rare and powerful computer chip which the robots hope to install on their spaceship.
+    Our adventurous heroes have tried to search for this chip, but the bunker is occupied by scores robo-bats and the Alpha Bat appears to be in posession of the chip.
+    In order to obtain the chip, the robots must capture Alpha Bat. 
+    This is no easy feat though; the bunker is filled with bat scouts which will alert the others if they spot intruders.
+    If we want to catch the Alpha Bat, we will need to know the amount of time it takes for the alert sent by the scount near the entrance to reach the Alpha Bat.
 </p>
 
 <p>
-    We have the advantage -- the bunker's walls don not reflect sound. So alert signals can extend only by straight line.
-    Alert time between two bats is proportionally to Euclidean distance between cells centers (look at illustration).
-    The time between neighbours cells is <strong>1 second</strong> (for simplicity).
-    Alert "lines" can not pass thought wall or walls corners.
+    We have the advantage, the bunker's walls do not reflect sound, so the alert signals can extend only in a straight line.
+    The time it takes an alert to move between two bats is proportional to the Euclidean distance between cell centers (see the illustration).
+    The time for the alert to travel between neighbouring cells is <strong>1 second</strong>.
+    Alert "lines" cannot pass thought walls or corners.
 
 </p>
 
 <p>
-    You are given the map of bunker as a list of strings, where:<br>
-    "-" -- an empty cell<br>
-    "W" -- a wall<br>
-    "B" -- a bat <br>
-    "L" -- the leader <br>
+    You are given the map of bunker as a list of strings:<br>
+    "-" is an empty cell<br>
+    "W" is a wall<br>
+    "B" is a bat <br>
+    "L" is the Alpha Bat <br>
     The entrance is placed at top left cell and here always a bat.
 </p>
 
 <p>
-    You should to calculate the minimal possible time from the first bat to the leader with a precision of two digits.
+    You should calculate the minimal possible time for the alert to reach the leader with a precision of two digits.
 </p>
 
 <p style="text-align: center;">
@@ -33,11 +34,11 @@
 </p>
 
 <p>
-    <strong>Input: </strong> A map of bunker. A list of strings.
+    <strong>Input: </strong> A map of the bunker, a list of strings.
 </p>
 
 <p>
-    <strong>Output: </strong> The minimal possible time with a precision of two digits. A float.
+    <strong>Output: </strong> The minimal possible time with a precision of two digits, a float.
 </p>
 
 
