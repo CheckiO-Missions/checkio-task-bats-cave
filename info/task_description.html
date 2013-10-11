@@ -20,7 +20,7 @@
     "-" is an empty cell<br>
     "W" is a wall<br>
     "B" is a bat <br>
-    "L" is the Alpha Bat <br>
+    "A" is the Alpha Bat <br>
     The entrance is placed at top left cell and here always a bat.
 </p>
 
@@ -50,19 +50,19 @@
     <pre class="brush: python">checkio([
     "B--",
     "---",
-    "--L"]) == 2.83
+    "--A"]) == 2.83
 assert checkio([
     "B-B",
     "BW-",
-    "-BL"]) == 4
+    "-BA"]) == 4
 assert checkio([
     "BWB--B",
     "-W-WW-",
-    "B-BWLB"]) == 12
+    "B-BWAB"]) == 12
 assert checkio([
     "B---B-",
     "-WWW-B",
-    "-WL--B",
+    "-WA--B",
     "-W-B--",
     "-WWW-B",
     "B-BWB-"]) == 9.24</pre>

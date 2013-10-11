@@ -7,19 +7,19 @@ if __name__ == '__main__':
     assert checkio([
         "B--",
         "---",
-        "--L"]) == 2.83, "1st example"
+        "--A"]) == 2.83, "1st example"
     assert checkio([
         "B-B",
         "BW-",
-        "-BL"]) == 4, "2nd example"
+        "-BA"]) == 4, "2nd example"
     assert checkio([
         "BWB--B",
         "-W-WW-",
-        "B-BWLB"]) == 12, "3rd example"
+        "B-BWAB"]) == 12, "3rd example"
     assert checkio([
         "B---B-",
         "-WWW-B",
-        "-WL--B",
+        "-WA--B",
         "-W-B--",
         "-WWW-B",
         "B-BWB-"]) == 9.24, "4th example"

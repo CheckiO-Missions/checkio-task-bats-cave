@@ -12,7 +12,7 @@ TESTS = {
         {
             "input": ["B--",
                       "---",
-                      "--L"],
+                      "--A"],
             "answer": 2.83,
             "explanation": [[0, 0, 0], [2, 2, 2.83]],
         },
@@ -20,7 +20,7 @@ TESTS = {
             "input": [
                 "B-B",
                 "BW-",
-                "-BL"],
+                "-BA"],
             "answer": 4,
             "explanation": [[0, 0, 0], [0, 2, 2], [2, 2, 4]]
         },
@@ -28,7 +28,7 @@ TESTS = {
             "input": [
                 "BWB--B",
                 "-W-WW-",
-                "B-BWLB"],
+                "B-BWAB"],
             "answer": 12,
             "explanation": [[0, 0, 0], [2, 0, 2], [2, 2, 4], [0, 2, 6], [0, 5, 9], [2, 5, 11], [2, 4, 12]]
         },
@@ -36,7 +36,7 @@ TESTS = {
             "input": [
                 "B---B-",
                 "-WWW-B",
-                "-WL--B",
+                "-WA--B",
                 "-W-B--",
                 "-WWW-B",
                 "B-BWB-"],
@@ -48,7 +48,7 @@ TESTS = {
         {
             "input": [
                 "BW-",
-                "--L",
+                "--A",
                 "B--"
             ],
             "answer": 4.24,
@@ -58,7 +58,7 @@ TESTS = {
             "input": [
                 "B-B-B",
                 "-WWW-",
-                "BWL-B",
+                "BWA-B",
                 "-WWW-",
                 "B-B-B"],
             "answer": 8,
@@ -66,7 +66,7 @@ TESTS = {
         },
         {
             "input": [
-                "BWL-B-",
+                "BWA-B-",
                 "-W----",
                 "-WW-B-",
                 "-W---B",
@@ -82,7 +82,7 @@ TESTS = {
                 "-W-W-W-",
                 "--B---B",
                 "BW-W-W-",
-                "----L--",
+                "----A--",
                 "BW-W-W-",
                 "-B--B-B"],
             "answer": 9.24,
@@ -94,7 +94,7 @@ TESTS = {
                 "BBBBB",
                 "BBBBB",
                 "BBBBB",
-                "BBBBL"],
+                "BBBBA"],
             "answer": 5.66,
             "explanation": [[0, 0, 0], [4, 4, 5.66]]
         },
@@ -103,7 +103,7 @@ TESTS = {
                 "B-----",
                 "-BBB--",
                 "-WWBW-",
-                "-----L",
+                "-----A",
                 "B-W-B-"],
             "answer": 9.24,
             "explanation": [[0, 0, 0], [1, 3, 3.16], [2, 3, 4.16], [4, 4, 6.40], [3, 5, 7.81]]

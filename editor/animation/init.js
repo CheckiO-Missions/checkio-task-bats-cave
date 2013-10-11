@@ -182,7 +182,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
                             continue;
                         }
                         r.attr(attrCell);
-                        if (ch === "B" || ch == "L") {
+                        if (ch === "B" || ch === "A") {
                             var bat = paper.bat((col + 0.5) * cell, (row + 0.5) * cell, batSizeX, batSizeY);
                             batSet.push(bat);
                             bat.attr(ch === "B" ? attrBat : attrLeader);
