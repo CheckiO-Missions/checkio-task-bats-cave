@@ -56,6 +56,15 @@ TESTS = {
         },
         {
             "input": [
+                "A--",
+                "---",
+                "---"
+            ],
+            "answer": 0,
+            "explanation": []
+        },
+        {
+            "input": [
                 "B-B-B",
                 "-WWW-",
                 "BWA-B",
