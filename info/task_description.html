@@ -11,7 +11,7 @@
     We have the advantage that the bunker's walls do not reflect sound, so the alert signals can extend only in a straight line.
     The time it takes an alert to move between two bats is proportional to the Euclidean distance between cell centers (see the illustration).
     The time for the alert to travel between neighbouring cells is <strong>1 second</strong>.
-    Alert "lines" cannot pass though walls or around corners.
+    Alert "lines" cannot pass through walls or around corners.
 
 </p>
 
@@ -25,7 +25,7 @@
 </p>
 
 <p>
-    You should calculate the minimal possible time for the alert to reach the leader with a precision of two digits.
+    You should calculate the minimal possible time for the alert to reach the leader with a precision of two digits (&plusmn;0.01).
 </p>
 
 <p style="text-align: center;">
@@ -34,11 +34,11 @@
 </p>
 
 <p>
-    <strong>Input: </strong> A map of the bunker, a list of strings.
+    <strong>Input: </strong> A map of the bunker as a list of strings.
 </p>
 
 <p>
-    <strong>Output: </strong> The minimal possible time with a precision of two digits, a float.
+    <strong>Output: </strong> The minimal possible time with a precision of two digits as a float.
 </p>
 
 
@@ -70,7 +70,15 @@ checkio([
 
 <p class="for_info_only">
     <strong>How it is used: </strong>
-    This task can be useful for determination of visibility.
+    This task is a tricky graph-search problem. Because as first you need to build the graph.
+    And this concept show how to determine the line of visibility.
+    It can help for the security (how to place cameras) or for the processing of lightening, and for many other problems.
+</p>
+
+
+<p>
+    <strong>Precondition:</strong>3 &le; |bunker| &le; 7<br>
+    The Alpha bat can be only one.
 </p>
 
 <p class="for_info_only">
