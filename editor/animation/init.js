@@ -258,8 +258,12 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
                 var active = paper.rect(pad, pad, bunker[0].length * cell, bunker.length * cell + pad).attr(
                     {"fill": colorBlue2, "opacity": 0, "opacity-fill": 0});
                 active.click(function(e) {
-                    var row = Math.floor((e.offsetY - pad) / cell);
-                    var col = Math.floor((e.offsetX - pad) / cell);
+                    console.log(e);
+                    var Y = e.layerY;
+                    var X = e.layerX;
+
+                    var row = Math.floor((Y - pad) / cell);
+                    var col = Math.floor((X - pad) / cell);
                     var ch = bunker[row][col];
                     var next_ch = cycle[(cycle.indexOf(ch) + 1) % 4];
                     if (ch == "B" || ch == "A") {
