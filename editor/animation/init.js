@@ -168,6 +168,8 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
 
             var cell = 40;
 
+            var pad = 10;
+
             var step = 10;
             var speedCoof = 0.5;
 
@@ -191,8 +193,8 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
             var attrTimer = {"font-family": "verdana", "font-size": cell * 0.8, "stroke": colorBlue4};
 
             this.createCanvas = function (map, extended) {
-                fullSizeX = map[0].length * cell;
-                fullSizeY = (map.length) * cell + extended * cell;
+                fullSizeX = map[0].length * cell + 2 * pad;
+                fullSizeY = (map.length) * cell + extended * cell + 2 * pad;
                 paper = Raphael(dom, fullSizeX, fullSizeY, 0, 0);
                 batSet = paper.set();
                 cellSet = paper.set();
@@ -200,7 +202,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
                 for (var row = 0; row < map.length; row++) {
                     for (var col = 0; col < map[0].length; col++) {
                         batSet.push({});
-                        var r = paper.rect(col * cell, row * cell, cell, cell).attr(attrCell);
+                        var r = paper.rect(pad + col * cell, pad + row * cell, cell, cell).attr(attrCell);
                         cellSet.push(r);
                         var ch = map[row][col];
                         if (ch === "W") {
@@ -208,7 +210,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
                             continue;
                         }
                         if (ch === "B" || ch === "A") {
-                            var bat = paper.bat((col + 0.5) * cell, (row + 0.5) * cell, batSizeX, batSizeY);
+                            var bat = paper.bat((col + 0.5) * cell + pad, (row + 0.5) * cell + pad, batSizeX, batSizeY);
                             batSet[row * map[0].length + col] = bat;
                             bat.attr(ch === "B" ? attrBat : attrLeader);
                         }
@@ -224,10 +226,10 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
                 var j = 0;
                 for (var i = 0; i < expl.length - 1; i++) {
                     setTimeout(function(){
-                        var start = "M" + ((expl[j][1] + 0.5) * cell) + "," + ((expl[j][0] + 0.5) * cell);
+                        var start = "M" + ((expl[j][1] + 0.5) * cell + pad) + "," + ((expl[j][0] + 0.5) * cell + pad);
                         var p = paper.path(start).attr(attrLine);
                         batSet.toFront();
-                        var end = "L" + ((expl[j+1][1] + 0.5) * cell) + "," + ((expl[j+1][0] + 0.5) * cell);
+                        var end = "L" + ((expl[j+1][1] + 0.5) * cell + pad) + "," + ((expl[j+1][0] + 0.5) * cell + pad);
                         var period = expl[j+1][2] - expl[j][2];
                         p.animate({"path": start + end}, period * 1000 * speedCoof);
                         j++;
@@ -250,14 +252,14 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
                 var obj = this;
                 var x0 = 10;
                 var y0 = 10;
-                var width = bunker[0].length
+                var width = bunker[0].length;
 
                 var cycle = "-BWA";
-                var active = paper.rect(0, 0, bunker[0].length * cell, bunker.length * cell).attr(
+                var active = paper.rect(pad, pad, bunker[0].length * cell, bunker.length * cell + pad).attr(
                     {"fill": colorBlue2, "opacity": 0, "opacity-fill": 0});
                 active.click(function(e) {
-                    var row = Math.floor((e.offsetY - y0) / cell);
-                    var col = Math.floor((e.offsetX - x0) / cell);
+                    var row = Math.floor((e.offsetY - pad) / cell);
+                    var col = Math.floor((e.offsetX - pad) / cell);
                     var ch = bunker[row][col];
                     var next_ch = cycle[(cycle.indexOf(ch) + 1) % 4];
                     if (ch == "B" || ch == "A") {
@@ -271,7 +273,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
                         cellSet[row * width + col].attr(attrWall);
                     }
                     if (next_ch == "B" || next_ch == "A") {
-                        var bat = paper.bat((col + 0.5) * cell, (row + 0.5) * cell, batSizeX, batSizeY);
+                        var bat = paper.bat((col + 0.5) * cell + pad, (row + 0.5) * cell + pad, batSizeX, batSizeY);
                         batSet[row * width + col] = bat;
                         bat.attr(next_ch === "B" ? attrBat : attrLeader);
                     }
