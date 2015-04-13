@@ -1,0 +1,48 @@
+<p>Mientras buscaban una nueva aventura en la isla, nuestro tr&iacute;o rob&oacute;tico encontr&oacute; un viejo b&uacute;nker muy espeluznante. En dicho bunker, alguien ha escondido un chip de computadora raro y de gran desempe&ntilde;o que los robots esperan instalar en su nave espacial. Nuestros h&eacute;roes aventureros han intentado buscar este chip, pero el b&uacute;nker est&aacute; infestado de robo-murci&eacute;lagos y el l&iacute;der de la colonia (murci&eacute;lago Alfa) parece estar en posesi&oacute;n del chip. Con el objetivo de obtener el chip, los robots deben capturar al murci&eacute;lago Alfa. Sin embargo, esto no es una tarea f&aacute;cil ya que el b&uacute;nker est&aacute; lleno de murci&eacute;lagos exploradores que alertar&aacute;n a los dem&aacute;s en cuanto detecten un intruso. De esta forma, si queremos capturar al murci&eacute;lago Alfa, es necesario conocer la cantidad de tiempo que tarda la alerta enviada por el explorador (cerca de la entrada), en llegar al murci&eacute;lago Alfa.</p>
+
+<p>Tenemos la ventaja que las paredes del b&uacute;nker no reflejan el sonido, por lo que las se&ntilde;ales de alerta s&oacute;lo pueden extenderse en l&iacute;nea recta. El tiempo que tarda una alerta para moverse entre dos murci&eacute;lagos es proporcional a la distancia eucl&iacute;dea entre los centros de sus posiciones (v&eacute;ase la ilustraci&oacute;n). El tiempo que tarda una alerta en cruzar dos celdas vecinas es de <strong>1 segundo</strong>. Las &quot;L&iacute;neas&quot; Alerta no pueden pasar a trav&eacute;s de paredes o en por esquinas. 1 second.</p>
+
+<p>Se te entregar&aacute; el mapa del b&uacute;nker como una lista de cadenas (str): &quot;-&quot; Es una celda vac&iacute;a &quot;W&quot; es una pared &quot;B&quot; es un murci&eacute;lago &quot;A&quot; es el murci&eacute;lago Alfa. La entrada est&aacute; situada en la celda superior izquierda y siempre hay un murci&eacute;lago all&iacute; (ten cuidado, el murci&eacute;lago Alfa puede estar aqu&iacute; tambi&eacute;n).</p>
+
+<p>Deber&aacute;s calcular el tiempo m&iacute;nimo que tardar&iacute;a la alerta en llegar al l&iacute;der, con una precisi&oacute;n de dos d&iacute;gitos(&plusmn;0.01).</p>
+
+<p style="text-align: center;"><img alt="bats-bunker" class="for_info_only" src="{{MEDIA}}bats-bunker.png" title="bats-bunker" width="600px" /> <img alt="bats-bunker" class="for_editor_only" src="{{MEDIA}}bats-bunker.png" title="bats-bunker" width="380px" /></p>
+
+<p><strong>Datos de Entrada: </strong> Un mapa del b&uacute;nker como una lista de cadenas (str).</p>
+
+<p><strong>Salida: </strong> El tiempo m&iacute;nimo que tarda la alerta en llegar al murci&eacute;lago Alfa, como un decimal (float) con una precisi&oacute;n de dos d&iacute;gitos.</p>
+
+<div class="for_info_only">
+<p><strong>Ejemplo:</strong></p>
+
+<pre class="brush: python">
+checkio([
+    &quot;B--&quot;,
+    &quot;---&quot;,
+    &quot;--A&quot;]) == 2.83
+checkio([
+    &quot;B-B&quot;,
+    &quot;BW-&quot;,
+    &quot;-BA&quot;]) == 4
+checkio([
+    &quot;BWB--B&quot;,
+    &quot;-W-WW-&quot;,
+    &quot;B-BWAB&quot;]) == 12
+checkio([
+    &quot;B---B-&quot;,
+    &quot;-WWW-B&quot;,
+    &quot;-WA--B&quot;,
+    &quot;-W-B--&quot;,
+    &quot;-WWW-B&quot;,
+    &quot;B-BWB-&quot;]) == 9.24</pre>
+</div>
+
+<p class="for_info_only"><strong>&iquest;C&oacute;mo se usa?: </strong> Este es un problema de b&uacute;squeda complejo. La pr&aacute;ctica que obtendr&aacute;s construyendo un grafo y determinando de la l&iacute;nea de visibilidad para los murci&eacute;lagos pueden ayudar a desarrollar un sistema de seguridad, determinando la localizaci&oacute;n de un circuito cerrado de televisi&oacute;n(CCTV), procesos de iluminaci&oacute;n e incluso algoritmos de buscar y descubrir, en juegos de AI.</p>
+
+<p><strong>Condiciones:</strong><br />
+3 &le; len(bunker) &le; 7<br />
+all(3 &le; len(row) &le; 7 and len(row) == len(row[0]) for row in bunker)<br />
+bunker[0][0] == &quot;B&quot; or bunker[0][0] == &quot;A&quot;<br />
+Solo hay un murci&eacute;lago Alfa.</p>
+
+<p class="for_info_only"><strong>&iquest;C&oacute;mo se usa Tryit?: </strong><iframe allowfullscreen="" frameborder="0" height="360" src="//www.youtube.com/embed/Vb0i4qor0q0" width="640"></iframe></p>
