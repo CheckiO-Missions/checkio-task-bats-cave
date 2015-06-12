@@ -80,7 +80,7 @@ checkio([
 <p>
     <strong>Precondition:</strong><br>
     3 &le; len(bunker) &le; 7<br>
-    all(3 &le; len(row) &le; 7 and len(row) == len(row[0]) for row in bunker)<br>
+    all(3 &le; len(row) &le; 7 and len(row) == len(bunker[0]) for row in bunker)<br>
     bunker[0][0] == "B" or bunker[0][0] == "A"<br>
     The Alpha bat can be only one.
 </p>
