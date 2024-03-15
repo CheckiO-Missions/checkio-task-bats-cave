@@ -1,0 +1,93 @@
+<p>
+    Auf der Suche nach einem Abenteuer auf der Insel hat unser Robotertrio einen gruseligen alten Bunker gefunden. 
+    In dem Bunker hat jemand einen seltenen und leistungsstarken Computerchip versteckt, den die Roboter in ihrem Raumschiff installieren wollen.
+    Unsere abenteuerlustigen Helden haben versucht, nach diesem Chip zu suchen, aber der Bunker ist von Robo-Fledermäusen besetzt und die Alpha-Fledermaus scheint im Besitz des Chips zu sein.
+    Um den Chip zu erhalten, müssen die Roboter Alpha Bat fangen. 
+    Das ist jedoch kein leichtes Unterfangen, denn der Bunker ist voll von Fledermaus-Scouts, die die anderen alarmieren, wenn sie Eindringlinge entdecken.
+    Wenn wir die Alpha-Fledermaus fangen wollen, müssen wir wissen, wie lange es dauert, bis der Alarm, der von dem Späher am Eingang gesendet wird, die Alpha-Fledermaus erreicht.
+</p>
+
+<p>
+    Wir haben den Vorteil, dass die Wände des Bunkers keinen Schall reflektieren, so dass sich die Alarmsignale nur in einer geraden Linie ausbreiten können.
+    Die Zeit, die ein Alarmsignal benötigt, um sich zwischen zwei Fledermäusen zu bewegen, ist proportional zum euklidischen Abstand zwischen den Zellzentren (siehe Abbildung).
+    Die Zeit, die ein Alarmsignal benötigt, um sich zwischen benachbarten Zellen zu bewegen, beträgt <strong>1 Sekunde</strong>.
+    Alarm-"Linien" können nicht durch Wände oder um Ecken herum verlaufen.
+
+</p>
+
+<p>
+    Sie erhalten die Karte des Bunkers als eine Liste von Strings:<br>
+    "-" ist eine leere Zelle<br>
+    "W" ist eine Wand<br>
+    "B" ist eine Fledermaus <br>
+    "A" ist die Alpha-Fledermaus <br>
+    Der Eingang befindet sich in der Zelle oben links und genau dort ist immer eine Fledermaus (Vorsicht, die Alpha-Fledermaus kann sich auch hier aufhalten).
+</p>
+
+<p>
+    Sie sollten die minimal mögliche Zeit berechnen, die der Alarm braucht, um den Anführer zu erreichen, und zwar mit einer Genauigkeit von zwei Stellen (&plusmn;0,01).
+</p>
+
+<p style="text-align: center;">
+    <img class="for_info_only" title="bats-bunker" src="{{MEDIA}}bats-bunker.png" alt="bats-bunker" width="600px"/>
+    <img class="for_editor_only" title="bats-bunker" src="{{MEDIA}}bats-bunker.png" alt="bats-bunker" width="380px"/>
+</p>
+
+<p>
+   <strong>Eingabe: </strong> Eine Karte des Bunkers als eine Liste von Strings.
+</p>
+
+<p>
+   <strong>Ausgabe: </strong> Die minimal mögliche Zeit mit einer Genauigkeit von zwei Ziffern als Float.
+</p>
+
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Beispiel:</strong>
+    </p>
+    <pre class="brush: python">checkio([
+    "B--",
+    "---",
+    "--A"]) == 2.83
+checkio([
+    "B-B",
+    "BW-",
+    "-BA"]) == 4
+checkio([
+    "BWB--B",
+    "-W-WW-",
+    "B-BWAB"]) == 12
+checkio([
+    "B---B-",
+    "-WWW-B",
+    "-WA--B",
+    "-W-B--",
+    "-WWW-B",
+    "B-BWB-"]) == 9.24</pre>
+</div>
+
+<p class="for_info_only">
+   <strong>Wie es verwendet wird: </strong>
+    Diese Aufgabe ist ein kniffliges Suchproblem.
+    Sie lehrt Sie, wie man einen Graphen erstellt und die Sichtlinie für die Fledermäuse bestimmt.
+    Diese Konzepte können bei der Entwicklung von Sicherheitsmaßnahmen in Form von Videoüberwachung und Beleuchtung helfen und sogar Such- und Entdeckungsalgorithmen zur KI im Spiel hinzufügen.
+
+</p>
+
+
+<p>
+   <strong>Vorbedingung:</strong><br>
+    3 &le; len(Bunker) &le; 7<br>
+    all(3 &le; len(row) &le; 7 und len(row) == len(bunker[0]) for row in bunker)<br>
+    bunker[0][0] == "B" oder Bunker[0][0] == "A"<br>
+    Der Alpha Bat kann nur einer sein. <br>
+    Der Pfad von der linken Ecke zum Alpha Bat existiert immer.
+</p>
+
+<!--
+<p class="for_info_only">
+    <iframe width="640" height="360" src="//www.youtube.com/embed/Vb0i4qor0q0" frameborder="0" allowfullscreen></iframe>
+</p>
+-->
